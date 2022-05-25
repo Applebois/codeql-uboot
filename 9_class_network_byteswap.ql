@@ -5,7 +5,7 @@ class NetworkByteSwap extends Expr {
   NetworkByteSwap () {
     // TODO: replace <class> and <var>
     exists(MacroInvocation abc |
-        abc.getMacro().getName().regexpMatch("ntoh.+")
+        abc.getMacro().getName().regexpMatch("ntoh.+") and this = abc.getExpr() 
     )
   }
 }
